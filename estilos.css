@@ -1,3 +1,119 @@
+html{
+    height: 100%;
+}
+html,body{
+    font-family: poppins;
+    background: var(--verde-comp);
+}
+body:after {
+    content: "En construccion"; 
+    font-size: 15em;  
+    color: rgba(52, 166, 214, 0.4);
+    z-index: 9999;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+      
+    -webkit-pointer-events: none;
+    -moz-pointer-events: none;
+    -ms-pointer-events: none;
+    -o-pointer-events: none;
+    pointer-events: none;
+  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+  
+.wrapper {
+    position: absolute;
+    align-items: flex-end;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+.box {
+    position: relative;
+    width: 120px;
+    text-align: center;
+    float: left;
+    margin: 0 10px;
+
+}
+a {
+    text-decoration: none;
+    color: var(--amar);
+    font-size: var(--lg);
+    text-transform: uppercase;
+}
+a:hover {
+    color: #fff;
+}
+a:before {
+    content: '';
+    position: absolute;
+    background: var(--verde-comp);
+    width: 100%;
+    height: 8px;
+    left: 8;
+    bottom: 8;
+    transform: scaleX(0);
+    animation: is forwards ani1 linear;
+    z-index: -1;
+}
+a:hover:before,
+a:focus:before {
+    animation: .5s forwards ani2 linear;
+}
+@keyframes ani1{
+    0%{
+        transform: scaleX(1);
+        height: 40px;
+    }
+    45%{
+        height: 5px;
+    }
+    55%{
+        transform: scaleX(1);
+        height: 5px;
+        opacity: 1;
+    }
+    100%{
+        transform: scaleX(0);
+        height: 40px;
+        opacity: 0.2;
+    }
+}
+@keyframes ani2{
+    0%{
+        transform: scaleX(0);
+        height: 5px;
+    }
+    45%{
+        transform: scaleX(1);
+        height: 5px;
+    }
+    55%{
+        height: 5px;
+    }
+    100%{
+        transform: scaleX(1);
+        height: 40px;
+    }
+}
+
+
+
 root{
     /* Variables de formato */
     --verde: #36573b;
@@ -15,3 +131,40 @@ root{
     --md: 16px; /* mediano */
     --lg: 18px; /* grande */
 }   
+body{
+    background: -webkit-gradient(linear, left top, left bottom, from(#36573b), to(#e2dd79));
+ }
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  li {
+    float: left;
+    text-align: center;
+    width: 10em;
+    display: flex;
+    justify-content: center;
+    font-size: var(--lg);
+  }
+  #contenedorTitulo {
+    display: flex;
+    justify-content: center;
+  }
+  ul.nav {
+   list-style: none;
+   display: block;
+   width: 200px;
+   position: relative;
+   top: 50px;
+   left: 100px;
+   padding: 60px 0 60px 0;
+   font-size: var(--lg);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}

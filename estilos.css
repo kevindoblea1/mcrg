@@ -1,0 +1,17 @@
+root{
+    /* Variables de formato */
+    --verde: #36573b;
+    --verde-lijero: #446d4a;
+    --verde-invertido: #c9a8c4;
+    --verde-comp: #533a53;
+    --amar: #d6cf40;
+    --amar-lijero: #e2dd79;
+    --amar-invertido: #2930bf;
+    --amar-comp: #179eff;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    
+    --sm: 14px; /* pequeño */
+    --md: 16px; /* mediano */
+    --lg: 18px; /* grande */
+}   

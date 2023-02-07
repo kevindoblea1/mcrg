@@ -1,16 +1,32 @@
+:root {
+    /* Variables de formato */
+    --verde: #36573b;
+    --verde-lijero: #446d4a;
+    --verde-invertido: #c9a8c4;
+    --verde-comp: #533a53;
+    --amar: #d6cf40;
+    --amar-lijero: #e2dd79;
+    --amar-invertido: #2930bf;
+    --amar-comp: #179eff;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    
+    --sm: 14px; /* pequeño */
+    --md: 16px; /* mediano */
+    --lg: 18px; /* grande */
+}  
 html{
     height: 100%;
 }
 html,body{
     font-family: poppins;
-    background: var(--verde-comp);
 }
 body:after {
-    content: "En construccion"; 
+    /*inicio de animacion sobre navbar*/
+    content: "En construccion";  /*marca de agua en construccion*/
     font-size: 15em;  
     color: rgba(52, 166, 214, 0.4);
     z-index: 9999;
-   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,18 +35,17 @@ body:after {
     right: 0;
     bottom: 0;
     left: 0;
-      
     -webkit-pointer-events: none;
     -moz-pointer-events: none;
     -ms-pointer-events: none;
     -o-pointer-events: none;
     pointer-events: none;
-  
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+    /*fin de animacion navbar*/
   }
   
 .wrapper {
@@ -38,26 +53,27 @@ body:after {
     align-items: flex-end;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
-.box {
+.navBox {
     position: relative;
     width: 120px;
     text-align: center;
     float: left;
-    margin: 0 10px;
+    margin: 0 25px;
 
 }
 a {
     text-decoration: none;
-    color: var(--amar);
-    font-size: var(--lg);
+    color: var(--verde-comp);
+    font-size: var(--md);
     text-transform: uppercase;
 }
 a:hover {
-    color: #fff;
+    color: var(--verde-lijero);
+    z-index: -1;
 }
 a:before {
     content: '';
@@ -78,61 +94,52 @@ a:focus:before {
 @keyframes ani1{
     0%{
         transform: scaleX(1);
-        height: 40px;
+        height: 25px; /*largo de la animacion de los div (modificar todos los height de ani1 y ani2*/
+        
+        
     }
     45%{
-        height: 5px;
+        height: 1px;
+        
     }
     55%{
         transform: scaleX(1);
-        height: 5px;
+        height: 1px;
         opacity: 1;
+        
     }
     100%{
         transform: scaleX(0);
-        height: 40px;
-        opacity: 0.2;
+        height: 25px;
+        opacity: 0.5;
+        margin-left: -25px;
     }
 }
 @keyframes ani2{
     0%{
         transform: scaleX(0);
-        height: 5px;
+        height: 1px;
+        
     }
     45%{
         transform: scaleX(1);
-        height: 5px;
+        height: 1px;
+        
     }
     55%{
-        height: 5px;
+        height: 1px;
+        
     }
     100%{
         transform: scaleX(1);
-        height: 40px;
+        height: 25px;
+        margin-left: -25px;
+        
     }
 }
 
-
-
-root{
-    /* Variables de formato */
-    --verde: #36573b;
-    --verde-lijero: #446d4a;
-    --verde-invertido: #c9a8c4;
-    --verde-comp: #533a53;
-    --amar: #d6cf40;
-    --amar-lijero: #e2dd79;
-    --amar-invertido: #2930bf;
-    --amar-comp: #179eff;
-    --text-input-field: #F7F7F7;
-    --hospital-green: #ACD9B2;
-    
-    --sm: 14px; /* pequeño */
-    --md: 16px; /* mediano */
-    --lg: 18px; /* grande */
-}   
 body{
-    background: -webkit-gradient(linear, left top, left bottom, from(#36573b), to(#e2dd79));
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--verde)), to(var(--amar)));
  }
 ul {
     list-style-type: none;
@@ -143,7 +150,7 @@ ul {
   li {
     float: left;
     text-align: center;
-    width: 10em;
+    width: 8em;
     display: flex;
     justify-content: center;
     font-size: var(--lg);
@@ -167,4 +174,14 @@ h1 {
     display: flex;
     justify-content: center;
     margin-top: 0px;
+    color: var(--verde-comp);
 }
+.feedContainer {
+    border: 5px solid var(--verde);
+    height: 150px;
+    width: 220px;
+    font-size: var(--sm);
+  }
+  .espaciador {
+    border: 5px solid var(--verde-comp);
+  }

@@ -48,7 +48,7 @@ body:after {
     /*fin de animacion navbar*/
   }
   
-.wrapper {
+.wrapper-navBar {
     position: absolute;
     align-items: flex-end;
     left: 50%;
@@ -185,3 +185,55 @@ h1 {
   .espaciador {
     border: 5px solid var(--verde-comp);
   }
+
+/*Inicio de implementacion de estilos para slides-photos container-slides*/
+  
+.container-slides{
+    width: 480px;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    top: 60%;
+    left: 25%;
+    overflow:visible;
+}
+/*Area de imagenes*/
+
+.wrapper-slides{
+    display: flex;
+    height: 100%;
+    object-fit:scale-down;
+    object-position: center, left;
+    animation: slide 16s infinite;
+}
+
+img{
+    height: 480px;
+}
+/*activacion de fotogramas clave*/
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}
+/* fin de implementacion slides
